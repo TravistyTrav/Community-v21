@@ -13,7 +13,7 @@ This project relies on the following core technologies. We encourage contributor
 
 ### ⚠️Required Development Environment
 To compile and run this source, you will need the following specific versions:
-* **Compiler:** **Visual Studio 2022 Community**
+* **Compiler:** **Visual Studio 2026 / 2022 Community**
 * **Database:** **Microsoft SQL Server 2019**
 
 ### 🤝 Contributions: Get Involved!
@@ -32,16 +32,8 @@ We rely on the expertise and passion of the community, and we look forward to in
 
 **Together, we'll build the best Flyff source and the next generation of classic game development.**
 
-### 🌐 The Website & Community Hub (Coming Soon!)
-Our dedicated project **website** is being built to serve the entire NukeZero community, covering all the games we support.
-
-The site will be the central hub for our efforts, offering:
-* **Information & Documentation:** Detailed guides on compiling, setting up, customizing the source, and a deep-dive into the core architecture.
-* **Releases:** Official download links and notes for stable source releases, patches, and updates.
-* **Roadmaps:** See what features and fixes we're currently prioritizing across projects.
-* **Contribution Hub:** The main platform for submitting and tracking all community code contributions and bug reports.
-
-We will update this repository with the link to the website as soon as it goes live!
+### 🌐 Support & More!
+* [**Community v21 Project Thread**](https://nukezero.com/threads/community-v21.6/)
 
 ### 📂 External Resources & Files
 You can quickly access the most latest complete files, and other resources via our Google Drive:
