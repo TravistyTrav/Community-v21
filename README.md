@@ -18,26 +18,11 @@ To compile and run this source, you will need the following specific versions:
 
 ### 🤝 Contributions: Get Involved!
 This isn't just our project—it's yours! Community contributions will be the **backbone** of this source.
-
-We are currently building a comprehensive system on our upcoming website to manage all code submissions and bug reports.
-
-> ⚠️ **Important:** The website must be complete before we can formally accept contributions or bug reports. We will open up this GitHub repository for direct code submissions and Issues once the infrastructure is ready.
-
-The best way you can help **right now** is by showing your support:
-
-* **Star the Repository:** Give us a **star** to help us build visibility and community momentum!
-* **Explore the Code:** Dive into the source and familiarize yourself with the structure for future contributions.
-
-We rely on the expertise and passion of the community, and we look forward to integrating your feedback and code once our full infrastructure is ready.
-
-**Together, we'll build the best Flyff source and the next generation of classic game development.**
-
-### 🌐 Support & More!
 * [**Community v21 Project Thread**](https://nukezero.com/threads/community-v21.6/)
 
 ### 📂 External Resources & Files
-You can quickly access the most latest complete files, and other resources via our Google Drive:
-* [**Flyff v21 Source Files (Google Drive)**](https://drive.google.com/drive/folders/17MBCQaevXxqptTPIMAzJZk2iZwspVYjH?usp=sharing)
+You can quickly access the most latest complete files, and other resources via our thread:
+* [**Community v21 Project Thread**](https://nukezero.com/threads/community-v21.6/)
 
 ### 🧑‍🤝‍🧑 Contributors
 * [@NukeZero](https://www.github.com/nukezero)
