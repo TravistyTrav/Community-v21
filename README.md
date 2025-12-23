@@ -13,7 +13,7 @@ This project relies on the following core technologies. We encourage contributor
 
 ### ⚠️Required Development Environment
 To compile and run this source, you will need the following specific versions:
-* **Compiler:** **Visual Studio 2026 / 2022 Community**
+* **Compiler:** **Visual Studio 2026 Community**
 * **Database:** **Microsoft SQL Server 2019**
 
 ### 🤝 Contributions: Get Involved!
