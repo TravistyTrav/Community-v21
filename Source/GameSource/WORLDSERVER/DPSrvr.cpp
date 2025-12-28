@@ -882,6 +882,11 @@ void CDPSrvr::OnAlignItem( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf
 	if( IsValidObj( pUser ) == FALSE )
 		return;
 
+	if (pUser->m_vtInfo.VendorIsVendor() || pUser->m_vtInfo.IsVendorOpen())
+	{
+		return;
+	}
+
 	if( pUser->IsDie() == TRUE )
 	{
 		return;
