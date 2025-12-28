@@ -113,4 +113,5 @@ resource 1 "..\ResClient\dataSub2.res"
 	file	"Spec_Item.txt"
 	file	"propItem.txt.txt"
 	file	"except.txt"
+	file	"Costume_GemAbility.txt"
 }

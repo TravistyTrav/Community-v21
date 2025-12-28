@@ -710,4 +710,71 @@ AddCombine( "IK1_WEAPON", "IK2_NONE", "IK3_NONE" )
 
 ------------------------
 
-AddCardCombine(II_GEN_MAT_ELE_LIGHTING3, 10000)
+-- Volcano
+AddCardCombine(3204, 10000)
+AddCardCombine(3207, 10000)
+AddCardCombine(3208, 10000)
+AddCardCombine(24187, 10000)
+
+-- Ocean
+AddCardCombine(3209, 10000) 
+AddCardCombine(3212, 10000)      
+AddCardCombine(3213, 10000) 
+AddCardCombine(24188, 10000) 
+
+-- Vaccum
+AddCardCombine(3224, 10000) 
+AddCardCombine(3227, 10000)      
+AddCardCombine(3228, 10000)
+AddCardCombine(24826, 10000)
+
+-- Lightning
+AddCardCombine(3214, 10000) 
+AddCardCombine(3217, 10000)      
+AddCardCombine(3218, 10000) 
+AddCardCombine(24827, 10000) 
+
+-- Earth
+AddCardCombine(3219, 10000) 
+AddCardCombine(3222, 10000)      
+AddCardCombine(3223, 10000) 
+AddCardCombine(24828, 10000) 
+
+--Fire CardS
+AddCardCombine(26594, 10000) --Fire Card (D)
+AddCardCombine(26595, 10000) --Fire Card (C)
+AddCardCombine(26596, 10000) --Fire Card (B)
+AddCardCombine(26597, 10000) --Fire Card (A)
+AddCardCombine(24182, 10000) --Fire Card (S)
+AddCardCombine(24820, 10000) --Fire Card (R)
+
+--Water Cards
+AddCardCombine(26598, 10000) --Water Card (D)
+AddCardCombine(26599, 10000) --Water Card (C)
+AddCardCombine(26600, 10000) --Water Card (B)
+AddCardCombine(26601, 10000) --Water Card (A)
+AddCardCombine(24183, 10000) --Water Card (S)
+AddCardCombine(24821, 10000) --Water Card (R)
+
+--Electric Cards
+AddCardCombine(26606, 10000) --Electric Card (D)
+AddCardCombine(26607, 10000) --Electric Card (C)
+AddCardCombine(26608, 10000) --Electric Card (B)
+AddCardCombine(26609, 10000) --Electric Card (A)
+AddCardCombine(24185, 10000) --Electric Card (S)
+AddCardCombine(24822, 10000) --Electric Card (R)
+
+--Wind Cards
+AddCardCombine(26602, 10000) --Wind Card (D)
+AddCardCombine(26603, 10000) --Wind Card (C)
+AddCardCombine(26604, 10000) --Wind Card (B)
+AddCardCombine(26605, 10000) --Wind Card (A)
+AddCardCombine(24184, 10000) --Wind Card (S)
+
+--Land Cards
+AddCardCombine(26610, 10000) --Land Card (D)
+AddCardCombine(26611, 10000) --Land Card (C)
+AddCardCombine(26612, 10000) --Land Card (B)
+AddCardCombine(26613, 10000) --Land Card (A)
+AddCardCombine(24186, 10000) --Land Card (S)
+AddCardCombine(24823, 10000) --Land Card (R)

@@ -493,7 +493,7 @@ DWORD FLItemUpgradeCostume::OnDoUpgradeItemSetGem( FLWSUser* pUser, const FLPack
 	if( pGemItemElem->GetItemIndex() != nJewelID )
 		return COSTUME_GEM_CANCEL;
 
-	DWORD dwAblity = GetGemAbilityKindRandom( pItemElem->GetProp()->dwParts );
+	DWORD dwAblity = GetGemAbilityKindRandom(pItemElem->GetProp()->dwItemKind3);
 	
 	if( dwAblity == NULL_ID )
 		return COSTUME_GEM_CANCEL;
