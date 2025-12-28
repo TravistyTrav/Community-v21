@@ -247,7 +247,7 @@ void FLContentSwitch::SetupUserContent_DEV()
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -281,7 +281,7 @@ void FLContentSwitch::SetupUserContent_DEV()
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -315,7 +315,7 @@ void FLContentSwitch::SetupUserContent_DEV()
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -349,7 +349,7 @@ void FLContentSwitch::SetupUserContent_DEV()
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -384,7 +384,7 @@ void FLContentSwitch::SetupUserContent_DEV()
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -435,7 +435,7 @@ void FLContentSwitch::SetupUserContent( const int nUserVer )
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -470,7 +470,7 @@ void FLContentSwitch::SetupUserContent( const int nUserVer )
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -505,7 +505,7 @@ void FLContentSwitch::SetupUserContent( const int nUserVer )
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -540,7 +540,7 @@ void FLContentSwitch::SetupUserContent( const int nUserVer )
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
@@ -576,7 +576,7 @@ void FLContentSwitch::SetupUserContent( const int nUserVer )
 		m_kContent.RegisterUserContent( CT_ITEM_CHARGE,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_BARUNA_PEARCING,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_COSTUME_MIX,				CS_VER1 );
-		m_kContent.RegisterUserContent( CT_DONATION,				CS_VER1 );
+		m_kContent.RegisterUserContent( CT_DONATION,				CS_NOT_SUPPORTED );
 		m_kContent.RegisterUserContent( CT_BLIND_WNDMAP,			CS_VER1 );
 		m_kContent.RegisterUserContent( CT_TELEPORTER,				CS_VER1 );
 		m_kContent.RegisterUserContent( CT_NEW_ENCHANTEFFECT,		CS_VER2 );
