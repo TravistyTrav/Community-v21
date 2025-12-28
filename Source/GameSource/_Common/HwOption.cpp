@@ -820,7 +820,7 @@ int COption::Load( LPCTSTR szFileName )
 		if( scan.Token == _T( "ChatFilter5" ) )
 		{
 			m_dwChatFilter[5] = scan.GetNumber( );
-			m_dwChatFilter[6] &= ~( CHATSTY_HELP | CHATSTY_SYSTEM | CHATSTY_GAME );
+			m_dwChatFilter[5] &= ~( CHATSTY_HELP | CHATSTY_SYSTEM | CHATSTY_GAME );
 		}
 		else
 		if( scan.Token == _T( "ChatFilterEtc" ) )
