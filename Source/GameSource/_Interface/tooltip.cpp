@@ -89,12 +89,20 @@ void CToolTip::InitTexture()
 
 	char		szBuf[32] = { NULL, };
 
-	for( int i = 0 ; i < MAX_TT ; ++i )
+#ifndef __WNDTOOLTIP_0917_FIX
+	for (int i = 0; i < MAX_TT; ++i)
+#else
+	for (int i = 0; i < (MAX_TT - 1); ++i)
+#endif
 	{
 		for( int j = 0 ; j < 9 ; ++ j )
 		{
 			szTextName = szTextNamebuf;
-			FLSPrintf( szBuf, _countof( szBuf ), "%02d", ( i * 9 ) + j );	// 툴팁 텍스쳐 9조각으로되어있음
+#ifndef __WNDTOOLTIP_0917_FIX
+			FLSPrintf(szBuf, _countof(szBuf), "%02d", (i * 9) + j);
+#else
+			FLSPrintf(szBuf, _countof(szBuf), "%02d", i + j);
+#endif
 			szTextName += szBuf;
 			szTextName += ".tga";
 			m_apTextureToolTip[nloadTexture].LoadTexture( g_Neuz.m_pd3dDevice, MakePath( DIR_THEME,g_xFlyffConfig->GetMainLanguage(), szTextName ), WNDCOLOR_DEFAULT_KEY, TRUE );

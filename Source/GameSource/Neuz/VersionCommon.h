@@ -12,7 +12,7 @@
 #define __INTERNALSERVER
 #endif
 
-
+#define	__WNDTOOLTIP_0917_FIX
 #define __S1108_BACK_END_SYSTEM
 #define __VENDOR_1106
 
