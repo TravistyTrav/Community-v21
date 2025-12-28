@@ -4,8 +4,7 @@
 #include "../all/Lexer.hpp"
 
 /*
-This file came from https://github.com/NukeZero
- - Credits are given to the following people for their contributions in this project via our github page.
+ -> This file came from https://github.com/NukeZero/Community-v21 &(or) https://nukezero.com/
 */
 
 namespace Settings
