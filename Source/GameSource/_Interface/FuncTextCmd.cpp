@@ -199,6 +199,10 @@ BOOL TextCmd_SetMonsterRespawn( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	D3DXVECTOR3 vPos	= pUser->GetPos();
 	CWorld* pWorld	= pUser->GetWorld();
 	
@@ -301,6 +305,10 @@ BOOL TextCmd_GameSetting( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->AddGameSetting();	
 #endif // __WORLDSERVER
 	return TRUE;	
@@ -354,6 +362,10 @@ BOOL TextCmd_AroundKill( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	if( pUser->GetWeaponItem() == NULL )
 		return TRUE;
 
@@ -369,6 +381,10 @@ BOOL	TextCmd_PetLevel( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	CPet* pPet	= pUser->GetPet();
 	if( pPet && pPet->GetExpPercent() == 100 )
 		pUser->PetLevelup();
@@ -394,6 +410,10 @@ BOOL	TextCmd_PetExp( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	CPet* pPet	= pUser->GetPet();
 	if( pPet && pPet->GetLevel() != PL_S )
 	{
@@ -537,6 +557,10 @@ BOOL TextCmd_PocketView( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->AddPocketView();
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -585,6 +609,10 @@ BOOL TextCmd_StartCollecting( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->StartCollecting();
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -594,6 +622,10 @@ BOOL TextCmd_StopCollecting( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->StopCollecting();
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -603,6 +635,10 @@ BOOL TextCmd_DoUseItemBattery( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->DoUseItemBattery();
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -831,6 +867,9 @@ BOOL TextCmd_Level( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
 
 	scanner.GetToken();
 	CString strJob = scanner.Token;
@@ -1392,6 +1431,10 @@ BOOL TextCmd_PartyLevel( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	DWORD dwLevel = scanner.GetNumber();
 	DWORD dwPoint = scanner.GetNumber();
 	if( dwPoint == 0 )
@@ -1414,6 +1457,9 @@ BOOL  TextCmd_InitSkillExp( CScanner & scanner )
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
 
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	if( pUser->InitSkillExp() == TRUE )
 		pUser->AddInitSkill();
 #endif // __WORLDSERVER
@@ -1424,7 +1470,10 @@ BOOL TextCmd_SkillLevel( CScanner & scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
-	
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	DWORD dwSkillKind	= scanner.GetNumber();
 	DWORD dwSkillLevel = scanner.GetNumber();
 
@@ -2221,6 +2270,9 @@ BOOL TextCmd_Music( CScanner& scanner )
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
 
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	u_long idmusic	= scanner.GetNumber();
 	g_DPCoreClient.SendPlayMusic( pUser->GetWorld()->GetID(), idmusic );
 #endif	// __WORLDSERVER
@@ -2230,6 +2282,10 @@ BOOL TextCmd_Sound( CScanner& scanner )
 { 
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	u_long idsound	= scanner.GetNumber();
 	g_DPCoreClient.SendPlaySound( pUser->GetWorld()->GetID(), idsound );
 #endif	// __WORLDSERVER
@@ -2240,6 +2296,9 @@ BOOL TextCmd_Summon( CScanner& scanner )
 #ifdef __WORLDSERVER
 	scanner.GetToken();
 	FLWSUser* pUser	= (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
 
 	const u_long idSummonPlayer = CPlayerDataCenter::GetInstance()->GetPlayerId( scanner.token );		//sun: 11, 캐릭터 정보 통합
 	if( pUser->m_idPlayer == idSummonPlayer )
@@ -2377,6 +2436,10 @@ BOOL TextCmd_Propose( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	s.GetToken();
 	CCoupleHelper::Instance()->OnPropose( pUser, s.token );
 #endif	// __WORLDSERVER
@@ -2387,6 +2450,10 @@ BOOL TextCmd_Refuse( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	CCoupleHelper::Instance()->OnRefuse( pUser );
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -2396,6 +2463,10 @@ BOOL TextCmd_Couple( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	CCoupleHelper::Instance()->OnCouple( pUser );
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -2405,6 +2476,10 @@ BOOL TextCmd_Decouple( CScanner & s )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser	= (FLWSUser*)s.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	CCoupleHelper::Instance()->OnDecouple( pUser );
 #endif	// __WORLDSERVER
 	return TRUE;
@@ -2727,6 +2802,10 @@ BOOL TextCmd_CreateChar( CScanner& scanner )
 { 
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	D3DXVECTOR3 vPos = pUser->GetPos();
 	CWorld* pWorld	= pUser->GetWorld();
 	
@@ -3277,12 +3356,20 @@ BOOL TextCmd_Undying( CScanner& scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	pUser->m_dwMode &= (~MATCHLESS2_MODE);
 	pUser->m_dwMode |= MATCHLESS_MODE;
 	g_xWSUserManager->AddModifyMode( pUser );
 #else // __WORLDSERVER
 #ifndef __CLIENT
 	CMover* pUser = (CMover*)scanner.dwValue;
+
+	if (!pUser)
+		return FALSE;
+
 	pUser->m_dwMode &= (~MATCHLESS2_MODE);
 	pUser->m_dwMode |= MATCHLESS_MODE;
 #endif
@@ -3293,12 +3380,20 @@ BOOL TextCmd_Undying2( CScanner& scanner )
 {
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser) || pUser->GetWorld() == NULL)
+		return FALSE;
+
 	pUser->m_dwMode &= (~MATCHLESS_MODE);
 	pUser->m_dwMode |= MATCHLESS2_MODE;
 	g_xWSUserManager->AddModifyMode( pUser );
 #else // __WORLDSERVER
 #ifndef __CLIENT
 	CMover* pUser = (CMover*)scanner.dwValue;
+
+	if (!pUser)
+		return FALSE;
+
 	pUser->m_dwMode &= (~MATCHLESS_MODE);
 	pUser->m_dwMode |= MATCHLESS2_MODE;
 #endif
@@ -3311,6 +3406,10 @@ BOOL TextCmd_NoDisguise( CScanner& scanner )
 { 
 #ifdef __WORLDSERVER
 	FLWSUser* pUser = (FLWSUser*)scanner.dwValue;
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	pUser->NoDisguise( NULL );
 	g_xWSUserManager->AddNoDisguise( pUser );
 #endif // __WORLDSERVER
@@ -3321,6 +3420,10 @@ BOOL TextCmd_NoDisguise( CScanner& scanner )
 BOOL DoDisguise( FLWSUser* pUser, DWORD dwIndex )
 {
 	pUser->Disguise( NULL, dwIndex );
+
+	if (!IsValidObj(pUser))
+		return FALSE;
+
 	g_xWSUserManager->AddDisguise( pUser, dwIndex );
 	return TRUE;
 }
